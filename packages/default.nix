@@ -1,8 +1,9 @@
-{ pkgs, lib, ... }:
-
 {
+  pkgs,
+  lib,
+  ...
+}: {
   vim = {
-
     viAlias = true;
     vimAlias = true;
 
@@ -54,7 +55,6 @@
 
     dashboard.dashboard-nvim.enable = true;
     projects.project-nvim.enable = true;
-    sessions.nvim-session-manager.enable = true;
     comments.comment-nvim.enable = true;
   };
 }
