@@ -1,15 +1,30 @@
 {
   description = "A collection of pre-configured neovim environments.";
 
-  outputs = {nixpkgs, ...} @ inputs: {
-    packages.x86_64-linux.default =
-      (inputs.nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        modules = [
-          ./packages/default.nix
-        ];
-      })
-      .neovim;
+  outputs = {nixpkgs, ...} @ inputs: 
+  let
+    system = "x86_64-linux";
+  in
+  {
+    packages."${system}" = {
+      default =
+        (inputs.nvf.lib.neovimConfiguration {
+          pkgs = nixpkgs.legacyPackages."${system}";
+          modules = [
+            ./packages/default.nix
+          ];
+        })
+        .neovim;
+
+      web =
+        (inputs.nvf.lib.neovimConfiguration {
+          pkgs = nixpkgs.legacyPackages."${system}";
+          modules = [
+            ./packages/web.nix
+          ];
+        })
+        .neovim;
+    };
   };
 
   inputs = {
