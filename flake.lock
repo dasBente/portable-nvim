@@ -51,22 +51,6 @@
         "type": "github"
       }
     },
-    "monokai-pro-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1734316245,
-        "narHash": "sha256-qN+QeaTF/RDdeSW82K2fVrNfDX2ehDXkgeDItqrH8Js=",
-        "owner": "loctvl842",
-        "repo": "monokai-pro.nvim",
-        "rev": "6c15e36834a624a32f46c6db8f9fc063995b24b6",
-        "type": "github"
-      },
-      "original": {
-        "owner": "loctvl842",
-        "repo": "monokai-pro.nvim",
-        "type": "github"
-      }
-    },
     "nil": {
       "inputs": {
         "flake-utils": [
@@ -2986,7 +2970,6 @@
     },
     "root": {
       "inputs": {
-        "monokai-pro-nvim": "monokai-pro-nvim",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf"
       }
