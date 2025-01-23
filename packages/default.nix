@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{...}: {
   vim = {
     viAlias = true;
     vimAlias = true;
@@ -21,18 +17,11 @@
       enableFormat = true;
       enableTreesitter = true;
 
+      # add languages for everyday use
       nix.enable = true;
       markdown.enable = true;
-      bash.enable = true;
-      css.enable = true;
-      html.enable = true;
-      python.enable = true;
-      ts.enable = true;
-      rust.enable = true;
-      rust.crates.enable = true;
       lua.enable = true;
-      tailwind.enable = true;
-      svelte.enable = true;
+      bash.enable = true;
     };
 
     visuals = {
