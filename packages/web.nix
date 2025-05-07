@@ -12,6 +12,12 @@
       formatOnSave = true;
     };
 
+    languages.svelte = {
+      enable = true;
+      lsp.enable = true;
+      format.enable = true;
+    };
+
     languages = {
       enableLSP = true;
       enableFormat = true;
@@ -23,7 +29,7 @@
       html.enable = true;
       ts.enable = true;
       css.enable = true;
-      svelte.enable = true;
+      nix.enable = true;
     };
 
     visuals = {
