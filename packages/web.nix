@@ -23,6 +23,7 @@
       html.enable = true;
       ts.enable = true;
       css.enable = true;
+      svelte.enable = true;
     };
 
     visuals = {
