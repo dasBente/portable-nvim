@@ -9,12 +9,17 @@
     autocomplete.nvim-cmp.enable = true;
 
     lsp = {
+      enable = true;
       formatOnSave = true;
     };
 
     languages.svelte = {
       enable = true;
-      lsp.enable = true;
+      format.enable = true;
+    };
+
+    languages.markdown = {
+      enable = true;
       format.enable = true;
     };
 
@@ -24,7 +29,6 @@
       enableTreesitter = true;
 
       # add languages for everyday use
-      markdown.enable = true;
       bash.enable = true;
       html.enable = true;
       ts.enable = true;
@@ -38,7 +42,13 @@
     };
 
     filetree.neo-tree.enable = true;
-    treesitter.context.enable = true;
+
+    treesitter = {
+      enable = true;
+      autotagHtml = true;
+      context.enable = true;
+      highlight.enable = true;
+    };
 
     binds = {
       whichKey.enable = true;
