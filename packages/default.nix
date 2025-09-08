@@ -1,11 +1,14 @@
 {...}: {
+  imports = [../modules/telescope.nix];
+
+  config.telescope.enable = true;
+
   config.vim = {
     viAlias = true;
     vimAlias = true;
 
     spellcheck.enable = true;
 
-    telescope.enable = true;
     autocomplete.nvim-cmp.enable = true;
 
     theme = {
