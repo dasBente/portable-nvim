@@ -9,10 +9,18 @@
   outputs = {nixpkgs, ...} @ inputs: 
   let
     system = "x86_64-linux";
-    config = mod: (inputs.nvf.lib.neovimConfiguration {
-      pkgs = nixpkgs.legacyPackages."${system}";
-      modules = [ mod ];
+
+    baseConfig = mod: (inputs.nvf.lib.neovimConfiguration {
+      pkgs = nixpkgs.legacyPackages.${system};
+      modules = [mod];
     }).neovim;
+
+    config = mod: baseConfig mod // {
+      meta = (baseConfig mod.meta or {}) // {
+        license = nixpkgs.lib.licenses.mit;
+        platforms = [system];
+      };
+    };
   in
   {
     packages."${system}" = {

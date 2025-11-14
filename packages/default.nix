@@ -68,6 +68,13 @@
 
     comments.comment-nvim.enable = true;
 
+    options = {
+      tabstop = 4;
+      shiftwidth = 4;
+      softtabstop = 4;
+      smartindent = true;
+    };
+
     keymaps = [
       {
         key = "-";
