@@ -1,4 +1,5 @@
 {...}: {
+  imports = [./common.nix];
   vim = {
     languages.svelte = {
       enable = true;
