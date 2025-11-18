@@ -22,12 +22,13 @@
           setup = {undo = {};};
         }
 
-        {
-          name = "git-conflicts";
-          packages = [pkgs.vimPlugins.telescope-git-conflicts-nvim];
-          setup = {git-conflicts = {};};
-        }
+        # {
+        #   name = "git-conflicts";
+        #   packages = [pkgs.vimPlugins.telescope-git-conflicts-nvim];
+        #   setup = {git-conflicts = {};};
+        # }
       ];
+
       mappings = {
         findFiles = "<leader>ff";
         liveGrep = "<leader>fg";
