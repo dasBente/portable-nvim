@@ -6,7 +6,6 @@
         enable = true;
         format.enable = true;
         crates.enable = true;
-        dab.enable = true;
         lsp.opts = ''
           ['rust-analyzer'] = {
               cargo = { allFeature = true },
@@ -18,8 +17,6 @@
         '';
         treesitter.enable = true;
       };
-      enableLSP = true;
-
       bash.enable = true;
       nix.enable = true;
     };

@@ -12,8 +12,6 @@
     };
 
     languages = {
-      enableLSP = true;
-
       bash.enable = true;
       html.enable = true;
       ts.enable = true;
