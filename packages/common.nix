@@ -25,6 +25,11 @@
       enableTreesitter = true;
     };
 
+    languages.markdown = {
+      enable = true;
+      format.enable = true;
+    };
+
     visuals = {
       nvim-web-devicons.enable = true;
       nvim-cursorline.enable = true;

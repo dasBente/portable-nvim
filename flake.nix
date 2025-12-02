@@ -18,6 +18,7 @@
     packages."${system}" = {
       default = config ./packages/default.nix;
       web = config ./packages/web.nix;
+      rust = config ./packages/rust.nix;
     };
   };
 }
