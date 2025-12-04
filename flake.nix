@@ -4,6 +4,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
     nvf.url = "github:NotAShelf/nvf";
+
+    renpy-syntax-nvim = {
+      url = "github:inzoiniac/renpy-syntax.nvim";
+      flake = false;
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let
@@ -19,6 +24,7 @@
       default = config ./packages/default.nix;
       web = config ./packages/web.nix;
       rust = config ./packages/rust.nix;
+      renpy = config ./packages/rust.nix;
     };
   };
 }

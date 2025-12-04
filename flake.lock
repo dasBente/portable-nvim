@@ -106,10 +106,27 @@
         "type": "github"
       }
     },
+    "renpy-syntax-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1751174504,
+        "narHash": "sha256-kz19noOvAtmOPZcLBcDz9ReFKVwMr94TLI36XYvPmRM=",
+        "owner": "inzoiniac",
+        "repo": "renpy-syntax.nvim",
+        "rev": "79dd44c26146b5ac0da4a7dc3db0073b98a6fada",
+        "type": "github"
+      },
+      "original": {
+        "owner": "inzoiniac",
+        "repo": "renpy-syntax.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
-        "nvf": "nvf"
+        "nvf": "nvf",
+        "renpy-syntax-nvim": "renpy-syntax-nvim"
       }
     },
     "systems": {
