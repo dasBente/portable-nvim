@@ -16,7 +16,6 @@
       html.enable = true;
       ts.enable = true;
       css.enable = true;
-      nix.enable = true;
     };
 
     treesitter = {

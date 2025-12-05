@@ -1,7 +1,11 @@
 {...}: {
-  imports = [../modules/telescope.nix];
+  imports = [
+    ../modules/telescope.nix
+    ../modules/languages/module.nix
+  ];
 
   config.telescope.enable = true;
+  config.lang.nix.enable = true;
 
   config.vim = {
     viAlias = true;

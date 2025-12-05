@@ -11,7 +11,6 @@
     };
 
     languages = {
-      nix.enable = true;
       markdown.enable = true;
       lua.enable = true;
       bash.enable = true;

@@ -18,7 +18,6 @@
         treesitter.enable = true;
       };
       bash.enable = true;
-      nix.enable = true;
     };
 
     treesitter = {

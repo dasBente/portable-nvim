@@ -22,7 +22,6 @@ in {
 
     languages = {
       bash.enable = true;
-      nix.enable = true;
     };
 
     treesitter = {
