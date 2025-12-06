@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ../modules/telescope.nix
-    ../modules/languages/module.nix
+    ../modules/languages
   ];
 
   config.telescope.enable = true;
