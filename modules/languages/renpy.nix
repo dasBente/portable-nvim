@@ -13,6 +13,11 @@
         name = "renpy-syntax";
         src = inputs.renpy-syntax-nvim;
       };
+      renpy-treesitter-grammar = pkgs.tree-sitter.buildGrammar {
+        language = "renpy";
+        version = "";
+        src = inputs.renpy-treesitter;
+      };
     in {
       vim.extraPlugins = {
         renpy-syntax-nvim = {
@@ -20,6 +25,8 @@
           setup = "require('renpy-syntax').setup()";
         };
       };
+
+      vim.treesitter.grammars = [renpy-treesitter-grammar];
     }
   );
 }

@@ -9,6 +9,11 @@
       url = "github:inzoiniac/renpy-syntax.nvim";
       flake = false;
     };
+
+    renpy-treesitter = {
+      url = "github:therealjasonkenney/tree-sitter-renpy";
+      flake = false;
+    };
   };
 
   outputs = {nixpkgs, ...} @ inputs: let

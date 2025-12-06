@@ -122,11 +122,28 @@
         "type": "github"
       }
     },
+    "renpy-treesitter": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738174967,
+        "narHash": "sha256-z++7e6aNnhyuFdmt1QOsQ2mcFfT2Ea9tM5wiASS9pqc=",
+        "owner": "therealjasonkenney",
+        "repo": "tree-sitter-renpy",
+        "rev": "6689001994407e410afbad577be142459f036d0a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "therealjasonkenney",
+        "repo": "tree-sitter-renpy",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
-        "renpy-syntax-nvim": "renpy-syntax-nvim"
+        "renpy-syntax-nvim": "renpy-syntax-nvim",
+        "renpy-treesitter": "renpy-treesitter"
       }
     },
     "systems": {
