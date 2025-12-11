@@ -1,4 +1,8 @@
-{...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = [./common.nix];
   vim = {
     languages = {
@@ -6,6 +10,7 @@
         enable = true;
         format.enable = true;
         crates.enable = true;
+        lsp.enable = true;
         lsp.opts = ''
           ['rust-analyzer'] = {
               cargo = { allFeature = true },
