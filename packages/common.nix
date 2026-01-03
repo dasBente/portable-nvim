@@ -14,6 +14,12 @@
     spellcheck.enable = true;
     autocomplete.nvim-cmp.enable = true;
 
+    clipboard = {
+      enable = true;
+      providers.wl-copy.enable = true;
+      registers = "unnamedplus";
+    };
+
     theme = {
       enable = true;
       name = "onedark";
