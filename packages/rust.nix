@@ -9,7 +9,7 @@
       rust = {
         enable = true;
         format.enable = true;
-        crates.enable = true;
+        extensions.crates-nvim.enable = true;
         lsp.enable = true;
         lsp.opts = ''
           ['rust-analyzer'] = {
