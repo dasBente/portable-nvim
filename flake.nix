@@ -16,20 +16,7 @@
     };
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
-    system = "x86_64-linux";
-
-    config = mod:
-      (inputs.nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        modules = [mod];
-      }).neovim;
-  in {
-    packages."${system}" = {
-      default = config ./packages/default.nix;
-      web = config ./packages/web.nix;
-      rust = config ./packages/rust.nix;
-      renpy = config ./packages/rust.nix;
-    };
+  outputs = {...}: {
+    nixosModules = import ./modules;
   };
 }

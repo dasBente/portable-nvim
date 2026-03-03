@@ -8,6 +8,7 @@
   config = lib.mkIf config.lang.nix.enable {
     vim.languages.nix = {
       enable = true;
+      extraDiagnostics.enable = true;
       lsp.enable = true;
       treesitter.enable = true;
     };
