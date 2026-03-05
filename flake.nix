@@ -1,9 +1,12 @@
 {
-  description = "A collection of pre-configured neovim environments.";
+  description = "Description for the project";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    import-tree.url = "github:vic/import-tree";
     nvf.url = "github:NotAShelf/nvf";
+    my-bins.url = "github:dasbente/my-bins";
 
     renpy-syntax-nvim = {
       url = "github:inzoiniac/renpy-syntax.nvim";
@@ -16,20 +19,6 @@
     };
   };
 
-  outputs = {nixpkgs, ...} @ inputs: let
-    system = "x86_64-linux";
-
-    config = mod:
-      (inputs.nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        modules = [mod];
-      }).neovim;
-  in {
-    packages."${system}" = {
-      default = config ./packages/default.nix;
-      web = config ./packages/web.nix;
-      rust = config ./packages/rust.nix;
-      renpy = config ./packages/rust.nix;
-    };
-  };
+  outputs = inputs @ {flake-parts, ...}:
+    flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 }
