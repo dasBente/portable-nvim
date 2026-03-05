@@ -118,7 +118,7 @@
         "type": "github"
       }
     },
-    "my-bind": {
+    "my-bins": {
       "inputs": {
         "flake-parts": "flake-parts_2",
         "import-tree": "import-tree_2",
@@ -296,7 +296,7 @@
       "inputs": {
         "flake-parts": "flake-parts",
         "import-tree": "import-tree",
-        "my-bind": "my-bind",
+        "my-bins": "my-bins",
         "nixpkgs": "nixpkgs_2",
         "nvf": "nvf",
         "renpy-syntax-nvim": "renpy-syntax-nvim",
