@@ -1,13 +1,6 @@
 {inputs, ...}: {
-  flake.nixosModules.languages = {
-    pkgs,
-    lib,
-    config,
-    ...
-  }: {
-    options.lang.renpy.enable = lib.mkEnableOption "Enables renpy language support";
-
-    config = lib.mkIf config.lang.renpy.enable {
+  flake.nixosModules.lang-renpy = {pkgs, ...}: {
+    config = {
       vim.extraPlugins = {
         renpy-syntax-nvim = {
           package = pkgs.vimUtils.buildVimPlugin {

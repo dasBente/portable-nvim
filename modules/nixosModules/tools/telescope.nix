@@ -1,13 +1,6 @@
 {
-  flake.nixosModules.tools = {
-    lib,
-    config,
-    pkgs,
-    ...
-  }: {
-    options.tools.telescope.enable = lib.mkEnableOption "Telescope fuzzy finder";
-
-    config = lib.mkIf config.tools.telescope.enable {
+  flake.nixosModules.tools-telescope = {pkgs, ...}: {
+    config = {
       vim.telescope = {
         enable = true;
         extensions = [

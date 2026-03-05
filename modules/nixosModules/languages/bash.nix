@@ -1,12 +1,6 @@
 {
-  flake.nixosModules.languages = {
-    lib,
-    config,
-    ...
-  }: {
-    options.lang.bash.enable = lib.mkEnableOption "Defaults for bash editing environment";
-
-    config = lib.mkIf config.lang.bash.enable {
+  flake.nixosModules.lang-bash = {
+    config = {
       vim.languages.bash = {
         enable = true;
         extraDiagnostics.enable = true;

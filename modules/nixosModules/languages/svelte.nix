@@ -1,12 +1,6 @@
 {
-  flake.nixosModules.languages = {
-    lib,
-    config,
-    ...
-  }: {
-    options.lang.svelte.enable = lib.mkEnableOption "Dependencies for a svelte dev environment";
-
-    config = lib.mkIf config.lang.web.enable {
+  flake.nixosModules.lang-svelte = {
+    config = {
       vim.languages.svelte = {
         enable = true;
         format.enable = true;

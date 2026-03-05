@@ -4,12 +4,15 @@
   ...
 }: {
   perSystem = {pkgs, ...}: {
-    packages.renpy =
+    packages.svelte =
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
         modules = with self.nixosModules; [
           shared-opts
-          lang-renpy
+          lang-html
+          lang-css
+          lang-typescript
+          lang-svelte
         ];
       }).neovim;
   };

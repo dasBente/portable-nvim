@@ -4,17 +4,14 @@
   ...
 }: {
   flake.nixosModules.shared-opts = {pkgs, ...}: {
-    imports = [
-      self.nixosModules.tools
-      self.nixosModules.languages
+    imports = with self.nixosModules; [
+      tools-telescope
+      lang-markdown
+      lang-nix
+      lang-bash
     ];
 
     config = {
-      tools.telescope.enable = true;
-      lang.nix.enable = true;
-      lang.markdown.enable = true;
-      lang.bash.enable = true;
-
       vim = {
         viAlias = true;
         vimAlias = true;

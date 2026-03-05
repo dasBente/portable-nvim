@@ -1,12 +1,6 @@
 {
-  flake.nixosModules.languages = {
-    lib,
-    config,
-    ...
-  }: {
-    options.lang.typescript.enable = lib.mkEnableOption "Dependencies for a typescript dev environment";
-
-    config = lib.mkIf config.lang.typescript.enable {
+  flake.nixosModules.lang-typscript = {
+    config = {
       vim.languages.ts = {
         enable = true;
         format.enable = true;

@@ -1,12 +1,6 @@
 {
-  flake.nixosModules.languages = {
-    lib,
-    config,
-    ...
-  }: {
-    options.lang.nix.enable = lib.mkEnableOption "Enables nix language support";
-
-    config = lib.mkIf config.lang.nix.enable {
+  flake.nixosModules.lang-nix = {
+    config = {
       vim.languages.nix = {
         enable = true;
         extraDiagnostics.enable = true;

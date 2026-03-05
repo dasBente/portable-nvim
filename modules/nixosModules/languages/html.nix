@@ -1,12 +1,6 @@
 {
-  flake.nixosModules.languages = {
-    lib,
-    config,
-    ...
-  }: {
-    options.lang.html.enable = lib.mkEnableOption "Defaults for HTML editing environment";
-
-    config = lib.mkIf config.lang.html.enable {
+  flake.nixosModules.lang-html = {
+    config = {
       vim.languages.html = {
         enable = true;
         format.enable = true;
