@@ -6,6 +6,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     import-tree.url = "github:vic/import-tree";
     nvf.url = "github:NotAShelf/nvf";
+    my-bind.url = "github:dasbente/my-bins";
 
     renpy-syntax-nvim = {
       url = "github:inzoiniac/renpy-syntax.nvim";

@@ -5,9 +5,9 @@
     pkgs,
     ...
   }: {
-    options.telescope.enable = lib.mkEnableOption "Telescope fuzzy finder";
+    options.tools.telescope.enable = lib.mkEnableOption "Telescope fuzzy finder";
 
-    config = lib.mkIf config.telescope.enable {
+    config = lib.mkIf config.tools.telescope.enable {
       vim.telescope = {
         enable = true;
         extensions = [
