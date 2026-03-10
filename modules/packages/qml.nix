@@ -4,7 +4,7 @@
   ...
 }: {
   perSystem = {pkgs, ...}: {
-    packages.default =
+    packages.qml =
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
         modules = [
