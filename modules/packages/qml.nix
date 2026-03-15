@@ -7,9 +7,9 @@
     packages.qml =
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
-        modules = [
-          self.nixosModules.shared-opts
-          self.nixosModules.qml
+        modules = with self.nixosModules; [
+          shared-opts
+          lang-qml
         ];
       }).neovim;
   };
