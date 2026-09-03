@@ -1,7 +1,7 @@
 {
   flake.nixosModules.lang-typescript = {
     config = {
-      vim.languages.ts = {
+      vim.languages.typescript = {
         enable = true;
         format.enable = true;
         treesitter.enable = true;
