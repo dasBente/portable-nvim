@@ -52,7 +52,7 @@
         treesitter = {
           enable = true;
           context.enable = true;
-          fold = true;
+          fold = false;
         };
 
         binds = {
