@@ -131,6 +131,11 @@
             action = ":%s/\<<c-r><c-w>\>/<c-r><c-w>/gI<Left><Left><Left>";
             desc = "Search and Replace hovered";
           }
+          {
+            key = "H";
+            mode = "n";
+            action = ":set hlsearch!<CR>";
+          }
         ];
       };
     };
