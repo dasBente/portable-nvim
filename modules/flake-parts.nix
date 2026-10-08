@@ -15,5 +15,10 @@
       type = lib.types.lazyAttrsOf lib.types.raw;
       default = {};
     };
+
+    lib = lib.mkOption {
+      type = lib.types.lazyAttrsOf lib.types.raw;
+      default = {};
+    };
   };
 }

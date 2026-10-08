@@ -1,16 +1,11 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{self, ...}: {
   perSystem = {pkgs, ...}: {
-    packages.python =
-      (inputs.nvf.lib.neovimConfiguration {
-        inherit pkgs;
-        modules = with self.nvfModules; [
-          shared-opts
-          lang-python
-        ];
-      }).neovim;
+    packages.python = self.lib.mkNeovim {
+      inherit pkgs;
+      modules = with self.nvfModules; [
+        shared-opts
+        lang-python
+      ];
+    };
   };
 }
