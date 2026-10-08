@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.tools-telescope = {pkgs, ...}: {
+  flake.nvfModules.tools-telescope = {pkgs, ...}: {
     config = {
       vim.telescope = {
         enable = true;

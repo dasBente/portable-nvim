@@ -1,5 +1,5 @@
 {inputs, ...}: {
-  flake.nixosModules.lang-renpy = {pkgs, ...}: {
+  flake.nvfModules.lang-renpy = {pkgs, ...}: {
     config = {
       vim.extraPlugins = {
         renpy-syntax-nvim = {

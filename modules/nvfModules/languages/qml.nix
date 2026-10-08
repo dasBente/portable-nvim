@@ -1,11 +1,11 @@
 {
-  flake.nixosModules.lang-python = {...}: {
+  flake.nvfModules.lang-qml = {
     config = {
-      vim.languages.python = {
+      vim.languages.qml = {
         enable = true;
         format.enable = true;
+        treesitter.enable = true;
         lsp.enable = true;
-        extraDiagnostics.enable = true;
       };
     };
   };

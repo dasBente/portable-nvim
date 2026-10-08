@@ -7,7 +7,7 @@
     packages.clang =
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
-        modules = with self.nixosModules; [
+        modules = with self.nvfModules; [
           shared-opts
           lang-c
         ];

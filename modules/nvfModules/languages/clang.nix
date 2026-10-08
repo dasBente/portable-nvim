@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.lang-c = {
+  flake.nvfModules.lang-c = {
     config.vim.languages.clang = {
       enable = true;
       cHeader = true;

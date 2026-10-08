@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.lang-bash = {
+  flake.nvfModules.lang-bash = {
     config = {
       vim.languages.bash = {
         enable = true;

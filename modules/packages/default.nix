@@ -8,7 +8,7 @@
       (inputs.nvf.lib.neovimConfiguration {
         inherit pkgs;
         modules = [
-          self.nixosModules.shared-opts
+          self.nvfModules.shared-opts
         ];
       }).neovim;
   };
