@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.lang-svelte = {
+  flake.nvfModules.lang-svelte = {
     config = {
       vim.languages.svelte = {
         enable = true;

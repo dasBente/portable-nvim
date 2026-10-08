@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.lang-typescript = {
+  flake.nvfModules.lang-typescript = {
     config = {
       vim.languages.typescript = {
         enable = true;

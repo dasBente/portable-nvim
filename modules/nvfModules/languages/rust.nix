@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.lang-rust = {
+  flake.nvfModules.lang-rust = {
     config = {
       vim.languages.rust = {
         enable = true;

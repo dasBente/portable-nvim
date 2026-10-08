@@ -1,16 +1,11 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{self, ...}: {
   perSystem = {pkgs, ...}: {
-    packages.qml =
-      (inputs.nvf.lib.neovimConfiguration {
-        inherit pkgs;
-        modules = with self.nixosModules; [
-          shared-opts
-          lang-qml
-        ];
-      }).neovim;
+    packages.qml = self.lib.mkNeovim {
+      inherit pkgs;
+      modules = with self.nvfModules; [
+        shared-opts
+        lang-qml
+      ];
+    };
   };
 }

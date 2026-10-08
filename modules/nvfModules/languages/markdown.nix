@@ -1,9 +1,10 @@
 {
-  flake.nixosModules.lang-nix = {
+  flake.nvfModules.lang-markdown = {
     config = {
-      vim.languages.nix = {
+      vim.languages.markdown = {
         enable = true;
         extraDiagnostics.enable = true;
+        format.enable = true;
         lsp.enable = true;
         treesitter.enable = true;
       };

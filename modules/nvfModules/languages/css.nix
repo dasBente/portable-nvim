@@ -1,7 +1,7 @@
 {
-  flake.nixosModules.lang-qml = {
+  flake.nvfModules.lang-css = {
     config = {
-      vim.languages.qml = {
+      vim.languages.css = {
         enable = true;
         format.enable = true;
         treesitter.enable = true;

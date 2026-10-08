@@ -3,8 +3,8 @@
   inputs,
   ...
 }: {
-  flake.nixosModules.shared-opts = {pkgs, ...}: {
-    imports = with self.nixosModules; [
+  flake.nvfModules.shared-opts = {pkgs, ...}: {
+    imports = with self.nvfModules; [
       tools-telescope
       lang-markdown
       lang-nix

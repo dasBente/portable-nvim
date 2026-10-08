@@ -1,15 +1,10 @@
-{
-  self,
-  inputs,
-  ...
-}: {
+{self, ...}: {
   perSystem = {pkgs, ...}: {
-    packages.default =
-      (inputs.nvf.lib.neovimConfiguration {
-        inherit pkgs;
-        modules = [
-          self.nixosModules.shared-opts
-        ];
-      }).neovim;
+    packages.default = self.lib.mkNeovim {
+      inherit pkgs;
+      modules = [
+        self.nvfModules.shared-opts
+      ];
+    };
   };
 }

@@ -1,5 +1,5 @@
 {
-  flake.nixosModules.lang-html = {
+  flake.nvfModules.lang-html = {
     config = {
       vim.languages.html = {
         enable = true;
