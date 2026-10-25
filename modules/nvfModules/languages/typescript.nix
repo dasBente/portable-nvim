@@ -1,6 +1,8 @@
-{
-  flake.nvfModules.lang-typescript = {
-    config = {
+{lib, ...}: {
+  flake.nvfModules.languages = {config, ...}: {
+    options.languages.typescript.enable = lib.mkEnableOption "Enable typescript language tools";
+
+    config = lib.mkIf config.languages.typescript.enable {
       vim.languages.typescript = {
         enable = true;
         format.enable = true;

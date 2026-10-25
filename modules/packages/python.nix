@@ -2,9 +2,9 @@
   perSystem = {pkgs, ...}: {
     packages.python = self.lib.mkNeovim {
       inherit pkgs;
-      modules = with self.nvfModules; [
-        shared-opts
-        lang-python
+      modules = [
+        self.nvfModules.shared-opts
+        {config.languages.python.enable = true;}
       ];
     };
   };

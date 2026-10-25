@@ -12,7 +12,7 @@
 
   options.flake = inputs.flake-parts.lib.mkSubmoduleOptions {
     nvfModules = lib.mkOption {
-      type = lib.types.lazyAttrsOf lib.types.raw;
+      type = lib.types.lazyAttrsOf lib.types.deferredModule;
       default = {};
     };
 

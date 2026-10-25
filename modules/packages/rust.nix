@@ -2,9 +2,9 @@
   perSystem = {pkgs, ...}: {
     packages.rust = self.lib.mkNeovim {
       inherit pkgs;
-      modules = with self.nvfModules; [
-        shared-opts
-        lang-rust
+      modules = [
+        self.nvfModules.shared-opts
+        {config.languages.rust.enable = true;}
       ];
     };
   };

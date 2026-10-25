@@ -2,9 +2,9 @@
   perSystem = {pkgs, ...}: {
     packages.qml = self.lib.mkNeovim {
       inherit pkgs;
-      modules = with self.nvfModules; [
-        shared-opts
-        lang-qml
+      modules = [
+        self.nvfModules.shared-opts
+        {config.languages.qml.enable = true;}
       ];
     };
   };

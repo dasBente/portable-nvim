@@ -1,6 +1,12 @@
-{
-  flake.nvfModules.tools-telescope = {pkgs, ...}: {
-    config = {
+{lib, ...}: {
+  flake.nvfModules.tools = {
+    pkgs,
+    config,
+    ...
+  }: {
+    options.tools.telescope.enable = lib.mkEnableOption "Enable telescope";
+
+    config = lib.mkIf config.tools.telescope.enable {
       vim.telescope = {
         enable = true;
         extensions = [

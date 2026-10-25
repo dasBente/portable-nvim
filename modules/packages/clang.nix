@@ -2,9 +2,9 @@
   perSystem = {pkgs, ...}: {
     packages.clang = self.lib.mkNeovim {
       inherit pkgs;
-      modules = with self.nvfModules; [
-        shared-opts
-        lang-c
+      modules = [
+        self.nvfModules.shared-opts
+        {config.languages.clang.enable = true;}
       ];
     };
   };

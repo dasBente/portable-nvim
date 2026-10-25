@@ -5,13 +5,19 @@
 }: {
   flake.nvfModules.shared-opts = {pkgs, ...}: {
     imports = with self.nvfModules; [
-      tools-telescope
-      lang-markdown
-      lang-nix
-      lang-bash
+      tools
+      languages
     ];
 
     config = {
+      languages = {
+        bash.enable = true;
+        markdown.enable = true;
+        nix.enable = true;
+      };
+
+      tools.telescope.enable = true;
+
       vim = {
         viAlias = true;
         vimAlias = true;

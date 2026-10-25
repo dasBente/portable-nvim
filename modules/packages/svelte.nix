@@ -2,12 +2,16 @@
   perSystem = {pkgs, ...}: {
     packages.svelte = self.lib.mkNeovim {
       inherit pkgs;
-      modules = with self.nvfModules; [
-        shared-opts
-        lang-html
-        lang-css
-        lang-typescript
-        lang-svelte
+      modules = [
+        self.nvfModules.shared-opts
+        {
+          config.languages = {
+            html.enable = true;
+            css.enable = true;
+            typescript.enable = true;
+            svelte.enable = true;
+          };
+        }
       ];
     };
   };

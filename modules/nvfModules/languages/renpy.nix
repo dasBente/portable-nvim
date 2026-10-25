@@ -1,6 +1,16 @@
-{inputs, ...}: {
-  flake.nvfModules.lang-renpy = {pkgs, ...}: {
-    config = {
+{
+  inputs,
+  lib,
+  ...
+}: {
+  flake.nvfModules.languages = {
+    pkgs,
+    config,
+    ...
+  }: {
+    options.languages.renpy.enable = lib.mkEnableOption "Enable renpy language tools";
+
+    config = lib.mkIf config.languages.renpy.enable {
       vim.extraPlugins = {
         renpy-syntax-nvim = {
           package = pkgs.vimUtils.buildVimPlugin {

@@ -1,6 +1,8 @@
-{
-  flake.nvfModules.lang-rust = {
-    config = {
+{lib, ...}: {
+  flake.nvfModules.languages = {config, ...}: {
+    options.languages.rust.enable = lib.mkEnableOption "Enable Rust language tools";
+
+    config = lib.mkIf config.languages.rust.enable {
       vim.languages.rust = {
         enable = true;
         format.enable = true;
