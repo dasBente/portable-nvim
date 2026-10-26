@@ -17,6 +17,7 @@
       };
 
       tools.telescope.enable = true;
+      tools.opencode.enable = true;
 
       vim = {
         viAlias = true;

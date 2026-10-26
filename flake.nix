@@ -8,6 +8,11 @@
     nvf.url = "github:NotAShelf/nvf";
     my-bins.url = "github:dasbente/my-bins";
 
+    opencode-nvim = {
+      url = "github:nickjvandyke/opencode.nvim";
+      flake = false;
+    };
+
     renpy-syntax-nvim = {
       url = "github:inzoiniac/renpy-syntax.nvim";
       flake = false;
